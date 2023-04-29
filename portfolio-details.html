@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error 404 - Page not found</title>
+  <style>
+    body {
+      background-color: #054477;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-top: 0;
+      text-align: center;
+    }
+    p {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    button {
+      background-color: white;
+      border: none;
+      color: #2196F3;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2196F3;
+      color: white;
+    }
+    .robot {
+      width: 200px;
+      height: 200px;
+      margin-top: -100px;
+      margin-bottom: 2rem;
+      animation-name: robot-bounce;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+    @keyframes robot-bounce {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Media Queries for Responsive Design */
+    @media only screen and (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      button {
+        font-size: 1rem;
+      }
+      .robot {
+        width: 150px;
+        height: 150px;
+        margin-top: -75px;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+      }
+      .robot {
+        width: 100px;
+        height: 100px;
+        margin-top: -50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <img class="robot" src="https://i.ibb.co/dK2bDFG/robo-sad.png" alt="robo-sad">
+    <h1>This Content Not Available</h1>
+    <p>We're working soon as possible to avail this content</p>
+    <a href="https://api.whatsapp.com/send?phone=917593099542&text=I%20want%20to%20know%20about%20your%20portfolios">
+    <button>Contact</button></a>
+    <a href="index.html"><button>Go back</button><br></a>
+    <p class="copyright">&copy; Copyright <strong>Sreejunath</strong>.
+      All Rights Reserved</p>
+  </div>
+</body>
+</html>
+
