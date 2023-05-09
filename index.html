@@ -29,29 +29,15 @@
 <body>
 <script>
 
-    function disableImageDownloads() {
+    document.addEventListener('contextmenu', event => {
 
-        var images = document.getElementsByTagName('img');
+        if (event.target.tagName.toLowerCase() !== 'img') {
 
-        for (var i = 0; i < images.length; i++) {
-
-            images[i].setAttribute('draggable', 'false');
-
-            images[i].onmousedown = function(event) {
-
-                if(event.button === 2) {
-
-                    return false;
-
-                }
-
-            };
+            event.preventDefault();
 
         }
 
-    }
-
-    window.onload = disableImageDownloads;
+    });
 
 </script>
   <!-- ======= Header ======= -->
