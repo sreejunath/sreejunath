@@ -19,6 +19,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
@@ -450,7 +452,7 @@
                       </h5>
                     </div>
                     <div>
-                      <form action="https://script.google.com/macros/s/AKfycbzkXMQ7PTfaWPSZnmrAkrIKJQNV2lY_J2jUrFGyR9rJ5HVzl5l1az_Ty-dcS59MNSfsOw/exec" method="POST"/>
+                      <form id="submit-form" action=""/>
 
                         <div class="row">
                           <div class="col-md-12 mb-3">
@@ -547,6 +549,27 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
+   <!-- after submission -->
+     <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbzkXMQ7PTfaWPSZnmrAkrIKJQNV2lY_J2jUrFGyR9rJ5HVzl5l1az_Ty-dcS59MNSfsOw/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    //window.location.href="https://google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
 
 </body>
 
