@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Thanks for Your Response!</title>
+    <style>
+      /* Default styles */
+  
+      
+      body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0077be;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+#container {
+  background-color: #fff;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+      h1 {
+        font-size: 24px;
+        margin-top: 0;
+        color: #cac415;
+      }
+      
+      #button {
+        display: inline-block;
+        background-color: #00a2e8;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        animation: pulse 1s infinite;
+      }
+
+      #vid{
+        width: 90%;
+        height: 35%;
+        
+      }
+      
+
+      
+      #button:hover {
+        background-color: #008cba;
+      }
+
+      #colp{
+        color: #cac415;
+      }
+      
+      /* Media queries */
+      @media only screen and (max-width: 768px) {
+        h1 {
+          font-size: 20px;
+        }
+        
+        #button {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+      
+      @media only screen and (max-width: 480px) {
+        #container {
+          padding: 10px;
+        }
+        
+        h1 {
+          font-size: 18px;
+        }
+        
+        #button {
+          font-size: 12px;
+          padding: 6px 12px;
+        }
+      }
+      
+      /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+
+    <video autoplay loop muted id="vid">
+      <source src="assets/img/message recieved.mp4" type="video/mp4">
+    </video>
+      <h1>Thanks for Your Response!</h1>
+      <p id="colp">We will reply as soon as possible.</p>
+      <button id="button">Back to Home</button>
+    </div>
+    <br>
+   
+    <script>
+      // Redirect to index.html when button is clicked
+      const button = document.querySelector('#button');
+      button.addEventListener('click', () => {
+        window.location.href = "index.html";
+      });
+    </script>
+  </body>
+</html>
+
+
+
