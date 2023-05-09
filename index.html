@@ -29,7 +29,29 @@
 <body>
 <script>
 
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    function disableImageDownloads() {
+
+        var images = document.getElementsByTagName('img');
+
+        for (var i = 0; i < images.length; i++) {
+
+            images[i].setAttribute('draggable', 'false');
+
+            images[i].onmousedown = function(event) {
+
+                if(event.button === 2) {
+
+                    return false;
+
+                }
+
+            };
+
+        }
+
+    }
+
+    window.onload = disableImageDownloads;
 
 </script>
   <!-- ======= Header ======= -->
