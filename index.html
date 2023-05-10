@@ -30,6 +30,12 @@
 <script>
 
     document.addEventListener('contextmenu', event => event.preventDefault());
+  
+  function myFunction() {
+
+  document.getElementById("myButton").disabled = true;
+
+}
 
 </script>
   <!-- ======= Header ======= -->
@@ -483,7 +489,7 @@
                             <p class="title-left">Your Response Is Valuable</p>
                           </div>
                           <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                            <button type="submit" onclick="myFunction()" id="myButton" class="button button-a button-big button-rouded">Send Message</button>
                           </div>
                         </div>
                       </form>
